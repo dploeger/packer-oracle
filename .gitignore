@@ -1,0 +1,5 @@
+*.box
+*.rpm.zip
+.vagrant
+packer_cache
+output*

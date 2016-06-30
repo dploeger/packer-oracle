@@ -1,0 +1,2 @@
+Download a copy of Oracle XE RPM oracle-xe-11.2.0-1.0.x86_64.rpm.zip from http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html
+and put it in this directory.

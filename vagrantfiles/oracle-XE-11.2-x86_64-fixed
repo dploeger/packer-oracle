@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # Optimize disk performance
+
+  config.vm.provision "shell", inline: <<-SHELL
+
+    if [ ! -e ~/.provision.disk ]
+    then
+
+      echo "Optimizing disk performance by temporarily allocate 15 GB."
+      echo "This might take some time."
+
+      dd if=/dev/urandom of=performanceFile bs=1M count=15G status=progress
+
+      rm -f performanceFile &>/dev/null
+
+      touch ~/.provision.disk
+
+    fi
+
+  SHELL
+end
