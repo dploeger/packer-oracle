@@ -97,14 +97,18 @@
     {
       "type": "vagrant",
       "output": "{{.BuildName}}.box",
-      "override": {
-        "oracle-XE-11.2-x86_64": {
-          "vagrantfile_template": "vagrantfiles/oracle-XE-11.2-x86_64"
-        },
-        "oracle-XE-11.2-x86_64-fixed": {
-          "vagrantfile_template": "vagrantfiles/oracle-XE-11.2-x86_64-fixed"
-        }
-      }
+      "vagrantfile_template": "vagrantfiles/oracle-XE-11.2-x86_64",
+      "only": [
+        "oracle-XE-11.2-x86_64"
+      ]
+    },
+    {
+      "type": "vagrant",
+      "output": "{{.BuildName}}.box",
+      "vagrantfile_template": "vagrantfiles/oracle-XE-11.2-x86_64-fixed",
+      "only": [
+        "oracle-XE-11.2-x86_64-fixed"
+      ]
     }
   ]
 }
