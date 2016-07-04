@@ -8,9 +8,8 @@ echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
 echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
 
 # Disable firewall
-service iptables save
-service iptables stop
-chkconfig iptables off
+service firewalld stop
+chkconfig firewalld off
 
 # Unzip first
 yum -y install unzip bc libaio flex

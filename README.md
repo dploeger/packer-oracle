@@ -7,9 +7,6 @@ The template oracle.json currently has these builders available:
 
 * VirtualBox provider:
     * [oracle-XE-11.2-x86_64](https://atlas.hashicorp.com/dploeger/boxes/oracle-XE-11.2-x86_64): Oracle XE 11.2 on 64 bit Cent OS 7
-    * [oracle-XE-11.2-x86_64-fixed](https://atlas.hashicorp.com/dploeger/boxes/oracle-XE-11.2-x86_64-fixed): Oracle XE 11.2 on 64 bit 
-    Cent OS 7 (will temporarily create a large file when deployed to optimize
-     disk performance)
   
 The definitions are based on the works of https://github.com/stlhrt/vagrant-boxes and 
 converted to Packer.

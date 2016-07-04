@@ -55,42 +55,6 @@
           "1"
         ]
       ]
-    },
-    {
-      "name": "oracle-XE-11.2-x86_64-fixed",
-      "type": "virtualbox-iso",
-      "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
-      ],
-      "boot_wait": "10s",
-      "disk_size": 24280,
-      "guest_os_type": "RedHat_64",
-      "http_directory": "http",
-      "iso_checksum": "88c0437f0a14c6e2c94426df9d43cd67",
-      "iso_checksum_type": "md5",
-      "iso_url": "http://mirror.symnds.com/CentOS/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
-      "ssh_username": "veewee",
-      "ssh_password": "veewee",
-      "ssh_port": 22,
-      "ssh_wait_timeout": "10000s",
-      "ssh_pty": "true",
-      "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'veewee'|sudo -S sh 'shutdown.sh'",
-      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "virtualbox_version_file": ".vbox_version",
-      "vboxmanage": [
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--memory",
-          "1024"
-        ],
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--cpus",
-          "1"
-        ]
-      ]
     }
   ],
   "post-processors": [
@@ -98,17 +62,6 @@
       "type": "vagrant",
       "output": "{{.BuildName}}.box",
       "vagrantfile_template": "vagrantfiles/oracle-XE-11.2-x86_64",
-      "only": [
-        "oracle-XE-11.2-x86_64"
-      ]
-    },
-    {
-      "type": "vagrant",
-      "output": "{{.BuildName}}.box",
-      "vagrantfile_template": "vagrantfiles/oracle-XE-11.2-x86_64-fixed",
-      "only": [
-        "oracle-XE-11.2-x86_64-fixed"
-      ]
     }
   ]
 }
