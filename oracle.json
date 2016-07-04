@@ -61,7 +61,7 @@
     {
       "type": "vagrant",
       "output": "{{.BuildName}}.box",
-      "vagrantfile_template": "vagrantfiles/oracle-XE-11.2-x86_64",
+      "vagrantfile_template": "vagrantfiles/oracle-XE-11.2-x86_64"
     }
   ]
 }
